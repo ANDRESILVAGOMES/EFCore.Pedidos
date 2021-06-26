@@ -1,0 +1,54 @@
+(Public, protected, private) - https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers
+(Get e Set) - https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/classes-and-structs/using-properties
+(ValueObjects) - https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/implement-value-objects
+
+ctrl + K + D - Identar código.
+
+cd .. - Voltar um diretorio.
+ls - Listar as pastas do diretorio atual
+cd - Navegar para a pasta de destino
+
+git status - Listar o status dos arquivos rastreados pelo git
+git add . - Adicionar todos os arquivos modificados/criados
+git commit -m "" - Adicionar um comentario nos arquivos modificados/criados
+git push -u origin main - Subir as alterações para o diretorio
+
+
+25/06/2021
+
+-- Criar uma solução em branco
+	( ) Definir o nome do projeto
+	( ) Definir o local para salvar o projeto
+
+--	Criar as camadas (Pastas)
+	( ) 01 - Apresentation
+	( ) 02 - Domain
+	( ) 03 - Infrastructure
+	
+-- Na camada Domain criar a BIBLIOTECA
+	( ) Nome do projeto + "Domain" 
+		EX. ECFCore.Pedidos.Domain
+	( ) Criar uma pasta "Entities" (Entidades) na biblioteca "Domain"
+	( ) Criar um arquivo do tipo "Classe" que vai representar a  "Entidades"
+		OBS. As entidades são "REFLEXO" da nossa tabela no banco de dados.
+			 Por padrão, os nomes das "Entidades" são escrito no singular.
+			 Todas as "Entidades" devem ser setadas como "Publicas"
+	( ) Deletar os USINGS não utilizados
+	( ) Criar todas as propriedades que vai contar no banco de dados.
+		EX. public int Codigo { get; set; }
+		- get - Disponibiliza (pegar) o valor da propriedade.			
+		- set - Disponibiliza (setar) um valor para a propriedade
+	( ) ValueObjects (VO) (Objetos de Valores)
+		EX. Um objeto de valor pode fazer referência a outras entidades.
+		Criar um ValueObjects "Nome" que vai conter o (Primeiro, Meio e Ultimo) 
+		e na Entidade Cliente você vai fazer a referência de ValueObject para representar a propriedade Nome da sua entidade
+		
+EXERCICIOS
+( ) Instalar o SQL Server
+ 
+( ) Terminar entidade Fornecedor
+( ) Desenvolver entidade Produto
+( ) Desenvolver entidade Pedido
+( ) Desenvolver entidade PedidoItem
+
+( ) Subir no GITHUB
